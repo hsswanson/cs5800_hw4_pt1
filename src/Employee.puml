@@ -2,47 +2,47 @@
 'https://plantuml.com/class-diagram
 
 +abstract class Employee{
--String firstName
--String lastName
--String socialSecurityNum
-+String getFirstName()
-+String getLastName()
-+String getSocialSecurityNum()
-+void setFirstName(String firstName)
-+void setLastName(String lastName)
-+void setSocialSecurityNum(String socialSecurityNum)
-+String toString()
+-firstName:String
+-lastName:String
+-socialSecurityNum:String
++getFirstName():String
++getLastName():String
++getSocialSecurityNum():String
++setFirstName(String firstName):void
++setLastName(String lastName):void
++setSocialSecurityNum(String socialSecurityNum):void
++toString():String
 }
 
 +class HourlyEmployee{
--int wage
--int hoursWorked
-+void setWage(int wage)
-+void setHoursWorked(int hoursWorked)
-+int getWage()
-+int getHoursWorked()
-+String toString()
+-wage:int
+-hoursWorked:int
++setWage(int wage):void
++setHoursWorked(int hoursWorked):void
++getWage():int
++getHoursWorked():int
++toString():String
 }
 +class CommissionEmployee{
--int commissionRate
--int grossSales
-+int getCommissionRate()
-+int getGrossSales()
-+void setCommissionRate(int commissionRate)
-+void setGrossSales()
-+String toString()
+-commissionRate:int
+-grossSales:int
++getCommissionRate():int
++getGrossSales():int
++setCommissionRate(int commissionRate):void
++setGrossSales():void
++toString():String
 }
 +class BaseEmployee{
--int baseSalary
-+int getBaseSalary()
-+void setBaseSalary(int baseSalary)
-+String toString()
+-baseSalary:int
++getBaseSalary():int
++setBaseSalary(int baseSalary):void
++toString():String
 }
 +class SalariedEmployee{
--int weeklySalary
-+int getSalary()
-+void setSalary()
-+String toString()
+-weeklySalary:int
++getSalary():int
++setSalary():void
++toString():String
 }
 
 Employee <|-- HourlyEmployee
